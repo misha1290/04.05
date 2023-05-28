@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.robot {
+    width: 450px;
+    height: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+.robot:hover .golova{
+    transform: translateY(20px);
+}
+.robot:hover .rot{
+    height: 30px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: red;
+}
+.golova {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color:bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ochi {
+    display: flex;
+    justify-content: center;
+}
+.glaz {
+    width: 30px;
+    height: 40px;
+    background-color: aqua;
+    border-radius: 50px 50px 0 0;
+    margin: 0 10px;
+    justify-content: space-around;
+    position: relative;
+    transition: 0.5s;
+}
+.glaz::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 8px;
+    background-color:#000;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+.eye:hover :after{
+    background-color:aquamarine;
+    transform: scale(1.2);
+}
+.robot:hover .glaz::after{
+    transform: translateY(15px) translateX(10px);
+}
+.nis {
+    height: 30px;
+    width: 10px;
+    background-color:burlywood;
+    transition: 0.5s;
+}
+.nis:hover{
+    transform: scale(2.7);
+    background-color: brown;
+}
+.rot {
+    width: 35px;
+    height: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color:hotpink;
+}
+.tilo {
+    display: flex;
+}
+.left-ruka {
+    flex-direction: row;
+    width: 40px;
+    height: 150px;
+    background: linear-gradient(black 75%, bisque 25%);
+    border-radius: 10%;
+    transform: rotate(30deg);
+}
+.puzo {
+    flex-direction: row;
+    width: 180px;
+    height: 230px;
+    background-color: black;
+    border-radius: 5%;
+}
+.right-ruka {
+    flex-direction: row;
+    width: 40px;
+    height: 150px;
+    background: linear-gradient(black 75%, bisque 25%);
+    border-radius: 10%;
+    transform: rotate(-30deg);
+}
+.robot:hover .left-ruka{
+    transform: translateY(-60px) rotate(120deg);
+}
+.robot:hover .right-ruka{
+    transform: translateY(-60px) rotate(-120deg);
+}
+.nogi {
+    display: flex;
+}
+.left-noga {
+    flex-direction: row;
+    width: 80px;
+    height: 200px;
+    background: linear-gradient(black 80%, bisque 20%);
+    border-radius: 0% 0% 20% 20%;
+    margin-right: 5px;
+}
+.right-noga {
+    flex-direction: row;
+    width: 80px;
+    height: 200px;
+    background: linear-gradient(black 80%, bisque 20%);
+    border-radius: 0% 0% 20% 20%;
+}
+.left-noga:hover {
+    background: linear-gradient(black 20%, bisque 80%);
+}
+.right-noga:hover {
+    background: linear-gradient(black 20%, bisque 80%);
+}
